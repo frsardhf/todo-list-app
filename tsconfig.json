@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -12,6 +13,12 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "paths": {
+      "@app/*": [ "src/app/*" ],
+      "@core/*": [ "src/app/core/*" ],
+      "@environments/*": [ "src/environments/*" ],
+      "@shared/*": [ "src/app/shared/*" ]
+    },
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,

@@ -1,0 +1,10 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+  <label for="title">Title: </label>
+  <input id="title" type="text" formControlName="title">
+  
+  <label for="body">Description: </label>
+  <textarea id="body" formControlName="body"></textarea>
+  
+  <p>Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!todoForm.valid">Submit</button>
+</form>
